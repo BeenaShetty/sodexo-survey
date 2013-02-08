@@ -1,0 +1,53 @@
+<div data-role="page" data-url="<%= Rho::RhoConfig.start_path %>/">
+  <div data-role="header" data-position="inline">
+     <div class="nav-bar-header"> 
+       <img src="sodexo.jpg" />   
+     </div>
+  </div>
+  <div data-role="content">
+     <div class ="list">
+      <h2> Survey Form</h2>
+    <div class="clear"></div>
+    <div>
+      <span><h5>How satisfied are you with the product?</h5></span>
+      <img src ="smiley/sad.jpg" title = "Sad" class = "answer star1" id = "sad1" onclick = "selected(this);" />
+      <img src ="smiley/poor.jpg" title = "Poor" class = "answer star1" id = "poor1" onclick = "selected(this);" />
+      <img src = "smiley/neutral.jpg" title = "Neutral" class = "answer star1" id = "neutral1" onclick = "selected(this);" />
+      <img src = "smiley/happy.jpg" title = "Happy" class = "answer star1" id = "happy1" onclick = "selected(this);" />
+      <img src = "smiley/veryhappy.jpg" title = "Excited" class = "answer star1" id = "excited1" onclick = "selected(this);" />
+    </div>
+    <div class="clear">
+      <span><h5> Does this product help in hassle free, cashless and faster transactions?</h5></span>
+      <img src = "smiley/sad.jpg" title = "Sad" class = "answer star2"  id = "sad2" onclick = "selected(this);" />
+      <img src = "smiley/poor.jpg" title = "Poor" class = "answer star2" id = "poor2" onclick = "selected(this);" />
+      <img src = "smiley/neutral.jpg" title = "Neutral" class = "answer star2" id = "neutral2" onclick = "selected(this);" />
+      <img src = "smiley/happy.jpg" title = "Happy" class = "answer star2" id = "happy2" onclick = "selected(this);" />
+      <img src = "smiley/veryhappy.jpg" title = "Excited" class = "answer star2" id = "excited2" onclick = "selected(this);" />
+    </div>
+    <div  class="clear">
+      <span><h5>Retail outlets across the country is sufficient for You ?</h5></span>
+      <img src = "smiley/sad.jpg" title = "Sad" class = "answer star3" id = "sad3" onclick = "selected(this);" />
+      <img src = "smiley/poor.jpg" title = "Poor" class = "answer star3" id = "poor3" onclick = "selected(this);" />
+      <img src = "smiley/neutral.jpg" title = "Neutral" class = "answer star3" id = "neutral3" onclick = "selected(this);" />
+      <img src = "smiley/happy.jpg" title = "Happy" class = "answer star3" id = "happy3" onclick = "selected(this);" />
+      <img src = "smiley/veryhappy.jpg" title = "Excited" class = "answer star3" id = "excited3" onclick = "selected(this);" />
+    </div>
+    <div class="clear"></div>
+    <div>
+     <input type="submit" value ="Submit" class="submit-button" onclick = "reset();"/>
+    </div>
+     </div>
+  </div>
+
+</div>
+<script type="text/javascript">
+function reset(){
+    jQuery(".answer").removeAttr("style");
+}
+
+function selected(object){
+    var classname = jQuery(object).attr("class").split(" ")[1];
+    jQuery("."+classname).removeAttr("style");
+    jQuery(object).css("opacity", "1");
+}
+</script>

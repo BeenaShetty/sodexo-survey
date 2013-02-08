@@ -1,0 +1,24 @@
+#sdk: "/home/kalpit/.rvm/gems/ruby-1.9.3-p374/gems/rhodes-3.5.1.13"
+sdkversion: 3.5.0
+name: sodexo-survey
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 4.6
+applog: rholog.txt
+iphone:
+  configuration: Release
+  sdk: iphonesimulator5.0
+  provisionprofile:
+  codesignidentity:
+  entitlements:
+  BundleIdentifier: com.rhomobile.sodexo-survey
+  BundleURLScheme: sodexo-survey
+wp:
+  productid: '75b239a0-4dce-0130-af15-6ca86b78b201'
+symbian:
+  uid: '0xec234ef6'
+android:
+  version: 2.1
+
+extensions: ["json", "another-extension"]
